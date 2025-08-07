@@ -1,0 +1,130 @@
+{
+  "type": "component",
+  "name": "api-test-global",
+  "children": [
+    {
+      "name": "div",
+      "nodeName": "div",
+      "elementId": "",
+      "attributes": [],
+      "classList": [],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [
+        {
+          "name": "text",
+          "nodeName": "text",
+          "textContent": "$ctrl.pets",
+          "evaluate": true
+        }
+      ],
+      "comments": ""
+    },
+    {
+      "name": "Button",
+      "nodeName": "bln-button",
+      "elementId": "",
+      "attributes": [
+        {
+          "property": "core",
+          "value": ""
+        }
+      ],
+      "classList": [],
+      "conditionalClasses": [],
+      "conditionalStyles": [],
+      "contentType": "text",
+      "displayExpression": "",
+      "events": {},
+      "iterate": {
+        "array": "",
+        "variable": "",
+        "trackByIndex": false
+      },
+      "styles": [],
+      "children": [],
+      "comments": "",
+      "type": "core-component",
+      "expressions": [
+        {
+          "expression": "\"loadAPI\"",
+          "to": "label"
+        },
+        {
+          "expression": "$ctrl.getPet()",
+          "to": "onClick"
+        },
+        {
+          "expression": "\"primary\"",
+          "to": "type"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "petstore2",
+      "type": "open-api",
+      "id": "open-api"
+    },
+    {
+      "name": "getPet",
+      "description": "",
+      "type": "method",
+      "body": "$ctrl.petstore2.findPetsByStatus({\n    status: 'sold'\n}).then(result => {\n    /* process the result */\n    // console.log(result.data)\n    $ctrl.pets = result.data\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "graphApi",
+      "type": "graphql-api",
+      "id": "graphql-api"
+    },
+    {
+      "name": "rest12",
+      "type": "open-api",
+      "id": "open-api"
+    },
+    {
+      "name": "getRest",
+      "description": "",
+      "type": "method",
+      "body": "$ctrl.rest12.getObjects().then(result => {\n    /* process the result */\n    console.log(result.data)\n})",
+      "invokeOnLoad": false,
+      "isAsync": false,
+      "returnType": {
+        "name": "any"
+      },
+      "parameters": [],
+      "watch": []
+    },
+    {
+      "name": "pets",
+      "description": "",
+      "type": "property",
+      "value": ""
+    }
+  ],
+  "bindings": [],
+  "modules": [],
+  "styles": [],
+  "directories": null,
+  "externalScripts": [],
+  "externalStylesheets": [],
+  "localScripts": [],
+  "localStylesheets": []
+}
