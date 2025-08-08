@@ -1,6 +1,6 @@
 {
   "type": "component",
-  "name": "api-test-global",
+  "name": "api-test-global2",
   "children": [
     {
       "name": "div",
@@ -122,9 +122,12 @@
   "bindings": [],
   "modules": [],
   "styles": [],
-  "directories": null,
   "externalScripts": [],
   "externalStylesheets": [],
   "localScripts": [],
-  "localStylesheets": []
+  "localStylesheets": [
+    {
+      "path": "a.css"
+    }
+  ]
 }
